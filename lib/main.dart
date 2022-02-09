@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:multi_restaurants_ui/details.dart';
 
 import 'catagories.dart';

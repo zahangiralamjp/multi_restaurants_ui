@@ -14,7 +14,7 @@ class CatagoriesPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           'Catagories',
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.red),
         ),
         centerTitle: true,
       ),

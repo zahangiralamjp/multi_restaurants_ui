@@ -3,11 +3,19 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-import 'mainDrawer.dart';
+import 'package:multi_restaurants_ui/mainDrawer.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  ///////////// bottomNavigationBar /////////////////////////////
+
+  //////////////// bottomNavigationBar //////////////////////////
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +31,6 @@ class HomePage extends StatelessWidget {
           IconButton(onPressed: () {}, icon: Icon(Icons.login)),
         ],
       ),
-
       body: SafeArea(
           child: Container(
         child: Padding(
@@ -192,8 +199,9 @@ class HomePage extends StatelessWidget {
       )),
       drawer: MainDrawer(),
 
-      ///  bottomNavigationBar: /
-      //  bottomNavigationBar: BottomNavigationBar(items: []),
+      //////// bottomNavigationBar /////////////////////////////
+      // bottomNavigationBar: MyBottomNavigationBar(),
+      ////////////////////////////////////////////////////////
     );
   }
 }

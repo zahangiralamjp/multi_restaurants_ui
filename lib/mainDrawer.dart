@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:multi_restaurants_ui/catagories.dart';
+import 'package:multi_restaurants_ui/settings.dart';
 
 class MainDrawer extends StatelessWidget {
   const MainDrawer({Key? key}) : super(key: key);
@@ -39,7 +41,10 @@ class MainDrawer extends StatelessWidget {
               title: Text('Order Items'),
             ),
             ListTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => CatagoriesPage()));
+              },
               leading: Icon(Icons.category_sharp),
               title: Text('Catagories'),
             ),
@@ -67,6 +72,15 @@ class MainDrawer extends StatelessWidget {
               leading: Icon(Icons.contacts),
               title: Text('Contact Us'),
               trailing: Icon(Icons.help_center),
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SettingsPage()));
+              },
+              leading: Icon(Icons.contacts),
+              title: Text('Settings'),
+              trailing: Icon(Icons.settings),
             ),
 
             ListTile(
